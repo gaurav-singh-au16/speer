@@ -1,5 +1,6 @@
 const { DataTypes } = require('sequelize');
-const db = require('../helpers/db.helper')
+const db = require('../helpers/db.helper');
+const Note = require('./note.schema');
 
 
 const User = db.define('users', {
@@ -33,5 +34,8 @@ const User = db.define('users', {
         sequelize: db,
     }
 )
+
+Note.belongsTo(User, { foreignKey: 'user_id' })
+User.hasMany(Note, { foreignKey: 'user_id' })
 
 module.exports = User
