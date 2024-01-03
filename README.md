@@ -46,6 +46,24 @@ This project consists of authentication and note-related APIs implemented using 
   - Search for notes based on a query string for the authenticated user.
   - Example: `GET /api/search?q=test`
 
+## Environment Variables
+
+Create a `.env` file in the root directory with the following variables:
+
+```plaintext
+PORT = '3001'
+
+# DB
+
+DB_NAME = 'your_db_name'
+DB_USERNAME = 'your_db_username'
+DB_PASSWORD = 'your_db_password'
+DB_HOST = 'localhost'
+DB_DIALECt = 'mysql'
+
+# jwt
+SECRET_KEY = 'speer'
+
 ## How to Run
 
 To run the code, use the following commands:
